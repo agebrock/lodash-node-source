@@ -1,51 +1,49 @@
 /**
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash modularize`
+ * Build: `lodash modularize modern exports="node"`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <http://lodash.com/license>
  */
-define(['./collections/at', './collections/contains', './collections/countBy', './collections/every', './collections/filter', './collections/find', './collections/findLast', './collections/forEach', './collections/forEachRight', './collections/groupBy', './collections/indexBy', './collections/invoke', './collections/map', './collections/max', './collections/min', './collections/pluck', './collections/reduce', './collections/reduceRight', './collections/reject', './collections/sample', './collections/shuffle', './collections/size', './collections/some', './collections/sortBy', './collections/toArray', './collections/where'], function(at, contains, countBy, every, filter, find, findLast, forEach, forEachRight, groupBy, indexBy, invoke, map, max, min, pluck, reduce, reduceRight, reject, sample, shuffle, size, some, sortBy, toArray, where) {
 
-  return {
-    'all': every,
-    'any': some,
-    'at': at,
-    'collect': map,
-    'contains': contains,
-    'countBy': countBy,
-    'detect': find,
-    'each': forEach,
-    'eachRight': forEachRight,
-    'every': every,
-    'filter': filter,
-    'find': find,
-    'findLast': findLast,
-    'findWhere': find,
-    'foldl': reduce,
-    'foldr': reduceRight,
-    'forEach': forEach,
-    'forEachRight': forEachRight,
-    'groupBy': groupBy,
-    'include': contains,
-    'indexBy': indexBy,
-    'inject': reduce,
-    'invoke': invoke,
-    'map': map,
-    'max': max,
-    'min': min,
-    'pluck': pluck,
-    'reduce': reduce,
-    'reduceRight': reduceRight,
-    'reject': reject,
-    'sample': sample,
-    'select': filter,
-    'shuffle': shuffle,
-    'size': size,
-    'some': some,
-    'sortBy': sortBy,
-    'toArray': toArray,
-    'where': where
-  };
-});
+module.exports = {
+  'all': require('./collections/every'),
+  'any': require('./collections/some'),
+  'at': require('./collections/at'),
+  'collect': require('./collections/map'),
+  'contains': require('./collections/contains'),
+  'countBy': require('./collections/countBy'),
+  'detect': require('./collections/find'),
+  'each': require('./collections/forEach'),
+  'eachRight': require('./collections/forEachRight'),
+  'every': require('./collections/every'),
+  'filter': require('./collections/filter'),
+  'find': require('./collections/find'),
+  'findLast': require('./collections/findLast'),
+  'findWhere': require('./collections/find'),
+  'foldl': require('./collections/reduce'),
+  'foldr': require('./collections/reduceRight'),
+  'forEach': require('./collections/forEach'),
+  'forEachRight': require('./collections/forEachRight'),
+  'groupBy': require('./collections/groupBy'),
+  'include': require('./collections/contains'),
+  'indexBy': require('./collections/indexBy'),
+  'inject': require('./collections/reduce'),
+  'invoke': require('./collections/invoke'),
+  'map': require('./collections/map'),
+  'max': require('./collections/max'),
+  'min': require('./collections/min'),
+  'pluck': require('./collections/pluck'),
+  'reduce': require('./collections/reduce'),
+  'reduceRight': require('./collections/reduceRight'),
+  'reject': require('./collections/reject'),
+  'sample': require('./collections/sample'),
+  'select': require('./collections/filter'),
+  'shuffle': require('./collections/shuffle'),
+  'size': require('./collections/size'),
+  'some': require('./collections/some'),
+  'sortBy': require('./collections/sortBy'),
+  'toArray': require('./collections/toArray'),
+  'where': require('./collections/where')
+};

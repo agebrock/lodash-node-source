@@ -1,29 +1,27 @@
 /**
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash modularize`
+ * Build: `lodash modularize modern exports="node"`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <http://lodash.com/license>
  */
-define(['./functions/after', './functions/bind', './functions/bindAll', './functions/bindKey', './functions/compose', './functions/createCallback', './functions/curry', './functions/debounce', './functions/defer', './functions/delay', './functions/memoize', './functions/once', './functions/partial', './functions/partialRight', './functions/throttle', './functions/wrap'], function(after, bind, bindAll, bindKey, compose, createCallback, curry, debounce, defer, delay, memoize, once, partial, partialRight, throttle, wrap) {
 
-  return {
-    'after': after,
-    'bind': bind,
-    'bindAll': bindAll,
-    'bindKey': bindKey,
-    'compose': compose,
-    'createCallback': createCallback,
-    'curry': curry,
-    'debounce': debounce,
-    'defer': defer,
-    'delay': delay,
-    'memoize': memoize,
-    'once': once,
-    'partial': partial,
-    'partialRight': partialRight,
-    'throttle': throttle,
-    'wrap': wrap
-  };
-});
+module.exports = {
+  'after': require('./functions/after'),
+  'bind': require('./functions/bind'),
+  'bindAll': require('./functions/bindAll'),
+  'bindKey': require('./functions/bindKey'),
+  'compose': require('./functions/compose'),
+  'createCallback': require('./functions/createCallback'),
+  'curry': require('./functions/curry'),
+  'debounce': require('./functions/debounce'),
+  'defer': require('./functions/defer'),
+  'delay': require('./functions/delay'),
+  'memoize': require('./functions/memoize'),
+  'once': require('./functions/once'),
+  'partial': require('./functions/partial'),
+  'partialRight': require('./functions/partialRight'),
+  'throttle': require('./functions/throttle'),
+  'wrap': require('./functions/wrap')
+};

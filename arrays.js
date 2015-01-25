@@ -1,42 +1,40 @@
 /**
  * Lo-Dash 2.4.1 (Custom Build) <http://lodash.com/>
- * Build: `lodash modularize`
+ * Build: `lodash modularize modern exports="node"`
  * Copyright 2012-2013 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.5.2 <http://underscorejs.org/LICENSE>
  * Copyright 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  * Available under MIT license <http://lodash.com/license>
  */
-define(['./arrays/compact', './arrays/difference', './arrays/findIndex', './arrays/findLastIndex', './arrays/first', './arrays/flatten', './arrays/indexOf', './arrays/initial', './arrays/intersection', './arrays/last', './arrays/lastIndexOf', './arrays/pull', './arrays/range', './arrays/remove', './arrays/rest', './arrays/sortedIndex', './arrays/union', './arrays/uniq', './arrays/without', './arrays/xor', './arrays/zip', './arrays/zipObject'], function(compact, difference, findIndex, findLastIndex, first, flatten, indexOf, initial, intersection, last, lastIndexOf, pull, range, remove, rest, sortedIndex, union, uniq, without, xor, zip, zipObject) {
 
-  return {
-    'compact': compact,
-    'difference': difference,
-    'drop': rest,
-    'findIndex': findIndex,
-    'findLastIndex': findLastIndex,
-    'first': first,
-    'flatten': flatten,
-    'head': first,
-    'indexOf': indexOf,
-    'initial': initial,
-    'intersection': intersection,
-    'last': last,
-    'lastIndexOf': lastIndexOf,
-    'object': zipObject,
-    'pull': pull,
-    'range': range,
-    'remove': remove,
-    'rest': rest,
-    'sortedIndex': sortedIndex,
-    'tail': rest,
-    'take': first,
-    'union': union,
-    'uniq': uniq,
-    'unique': uniq,
-    'unzip': zip,
-    'without': without,
-    'xor': xor,
-    'zip': zip,
-    'zipObject': zipObject
-  };
-});
+module.exports = {
+  'compact': require('./arrays/compact'),
+  'difference': require('./arrays/difference'),
+  'drop': require('./arrays/rest'),
+  'findIndex': require('./arrays/findIndex'),
+  'findLastIndex': require('./arrays/findLastIndex'),
+  'first': require('./arrays/first'),
+  'flatten': require('./arrays/flatten'),
+  'head': require('./arrays/first'),
+  'indexOf': require('./arrays/indexOf'),
+  'initial': require('./arrays/initial'),
+  'intersection': require('./arrays/intersection'),
+  'last': require('./arrays/last'),
+  'lastIndexOf': require('./arrays/lastIndexOf'),
+  'object': require('./arrays/zipObject'),
+  'pull': require('./arrays/pull'),
+  'range': require('./arrays/range'),
+  'remove': require('./arrays/remove'),
+  'rest': require('./arrays/rest'),
+  'sortedIndex': require('./arrays/sortedIndex'),
+  'tail': require('./arrays/rest'),
+  'take': require('./arrays/first'),
+  'union': require('./arrays/union'),
+  'uniq': require('./arrays/uniq'),
+  'unique': require('./arrays/uniq'),
+  'unzip': require('./arrays/zip'),
+  'without': require('./arrays/without'),
+  'xor': require('./arrays/xor'),
+  'zip': require('./arrays/zip'),
+  'zipObject': require('./arrays/zipObject')
+};
